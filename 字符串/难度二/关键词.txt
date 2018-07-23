@@ -1,0 +1,1 @@
+关键词：序列自动机或next数组，KMP，manacher
