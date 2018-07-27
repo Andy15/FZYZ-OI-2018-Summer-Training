@@ -8,32 +8,34 @@ int n, m, f[MAXN][BIN], g[MAXN], h[BIN];
 int edge, first[MAXN], to[MAXN << 1], nxt[MAXN << 1], val[MAXN << 1];
 
 void dfs1(register int cur, register int fa) {
-    for (register int i = first[cur], son, son_val; i; i = nxt[i]) {
+    register int *f_cur = f[cur], *g_cur = &g[cur];
+    for (register int i = first[cur], *f_son, son, val_cur; i; i = nxt[i]) {
         if ((son = to[i]) == fa)
             continue;
+        f_son = &f[son][0];
         dfs1(son, cur);
-        ++f[cur][(son_val = val[i]) & 15]; g[cur] += g[son] + (son_val >> 4);
-        for (register int j = 0, k, o; j < BIN; ++j) {
-            k = j + son_val; o = f[son][j];
-            f[cur][k & 15] += o; g[cur] += (k >> 4) * o;
+        ++f_cur[(val_cur = val[i]) & 15]; *g_cur += g[son] + (val_cur >> 4);
+        for (register int j = 0, k = val_cur; j < BIN; ++j, ++k, ++f_son) {
+            f_cur[k & 15] += *f_son; *g_cur += (k >> 4) * *f_son;
         }
     }
 }
 
 void dfs2(register int cur, register int fa) {
-    for (register int i = first[cur], son, son_val, son_and, g_cur, *ff, *gg; i; i = nxt[i]) {
+    register int *f_cur = f[cur], *g_cur = &g[cur];
+    for (register int i = first[cur], g_tmp, son, son_val, *f_son_1, *f_son_2, *g_son; i; i = nxt[i]) {
         if ((son = to[i]) == fa)
             continue;
-        ff = &f[son][son_and = son_val & 15]; gg = &g[son]; g_cur = g[cur] - *gg;
-        for (register int j = 0, k = son_val = val[i], o, p; j < BIN; ++j, ++k) {
-            o = f[son][j]; p = k & 15;
-            g_cur -= (k >> 4) * o; h[p] = f[cur][p] - o;
+        f_son_1 = f_son_2 = &f[son][0]; g_son = &g[son];
+        g_tmp = *g_cur - *g_son;
+        for (register int j = 0, k = (son_val = val[i]); j < BIN; ++j, ++k, ++f_son_1) {
+            g_tmp -= (k >> 4) * *f_son_1; h[k & 15] = f_cur[k & 15] - *f_son_1;
         }
-        ++*ff; *gg += g_cur; --h[son_and];
-        for (register int j = 0, k = son_val, tmp; j < BIN; ++j, ++k) {
-            f[son][k & 15] += (tmp = h[j]); *gg += (k >> 4) * tmp;
+        ++f_son_2[son_val & 15]; *g_son += g_tmp; --h[son_val & 15];
+        for (register int j = 0, k = son_val, *h_son = h; j < BIN; ++j, ++k, ++h_son) {
+            f_son_2[k & 15] += *h_son; *g_son += (k >> 4) * *h_son;
         }
-        dfs2(son, cur);
+        dfs2(to[i], cur);
     }
 }
 
@@ -43,10 +45,10 @@ int main() {
         int a, b, c; scanf("%d%d%d", &a, &b, &c); add(a, b, c);
     }
     dfs1(1, 0); dfs2(1, 0);
-    for (register int i = 1; i <= n; ++i) {
-		register long long ans = g[i] << 4;
+    for (register int i = 1, *dp; i <= n; ++i) {
+		register long long ans = g[i] << 4; dp = f[i];
 		for (register int j = 0; j < BIN; ++j)
-            ans += (j ^ m) * f[i][j];
+            ans += (j ^ m) * dp[j];
 		printf("%lld\n", ans);
 	}
     return 0;

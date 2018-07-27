@@ -1,6 +1,6 @@
-- [ ] YZOJ 1224
-- [ ] YZOJ 1015
-- [ ] YZOJ 1043
-- [ ] YZOJ 1032
-- [ ] YZOJ 2316
-- [ ] YZOJ 2049
+- [x] YZOJ 1224
+- [x] YZOJ 1015
+- [x] YZOJ 1043
+- [x] YZOJ 1032
+- [x] YZOJ 2316
+- [x] YZOJ 2049
