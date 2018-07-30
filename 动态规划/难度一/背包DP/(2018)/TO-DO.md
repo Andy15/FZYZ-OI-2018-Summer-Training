@@ -2,6 +2,6 @@
 - [x] YZOJ 2056
 - [x] YZOJ 1170
 - [x] YZOJ 1230
-- [ ] YZOJ 1011
-- [ ] YZOJ 1803
+- [x] YZOJ 1011
+- [x] YZOJ 1803
 - [ ] YZOJ 2045

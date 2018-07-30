@@ -1,5 +1,5 @@
 - [ ] YZOJ 3271
 - [ ] YZOJ 2381
-- [ ] YZOJ 2831
+- [x] YZOJ 2831
 - [ ] YZOJ 3117
 - [ ] YZOJ 3680
