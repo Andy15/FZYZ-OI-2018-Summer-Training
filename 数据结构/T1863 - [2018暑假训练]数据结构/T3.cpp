@@ -1,40 +1,42 @@
 #include <bits/stdc++.h>
-#define MAXN 160
+#define MAXN 5555
 using namespace std;
 
-int n, a[MAXN][MAXN], b[MAXN], c[MAXN][MAXN], top, cur, l[MAXN], r[MAXN], ans;
-
-inline void cmax(register int &a, register int b) {
-    (a < b) && (a = b);
-}
+int n, a[MAXN][MAXN], b[MAXN][MAXN], c[MAXN], d[MAXN], e[MAXN], top, ans;
 
 int main() {
     scanf("%d", &n);
-    for (register int i = 1; i <= n; ++i)
-        for (register int j = 1; j <= n; ++j)
-            scanf("%d", &c[i][j]);
-    /*
     srand(1626);
     for (register int i = 1; i <= n; ++i)
         for (register int j = 1; j <= n; ++j)
-            c[i][j] = ((rand() & 7) > 0);
-    */
+            a[i][j] = ((rand() & 7) > 0);
     for (register int i = 1; i <= n; ++i)
-        for (register int j = 1; j <= n; ++j) {
-            if (!c[i][j])
-                continue;
-            a[i][j] = a[i][j - 1] + 1;
-        }
-    for (register int i = 1, *x = a[1]; i <= n; ++i, x = a[i]) {
+        for (register int j = 1; j <= n; ++j)
+            b[i][j] = a[i][j] ? b[i][j - 1] + 1 : 0;
+    for (register int j = 1; j <= n; ++j) {
         top = 0;
-        for (register int j = 1, j_lim = n + 1; j <= j_lim; ++j) {
-            while (x[cur = b[top--]] > x[i])
-                r[cur] = i;
-            l[i] = b[top];
-            b[++top] = i;
+        for (register int i = 1; i <= n; ++i) {
+            if (!b[i][j]) {
+                top = d[i] = 0;
+                continue;
+            }
+            d[i] = 1;
+            while (top && b[i][j] <= b[c[top]][j])
+                d[i] += d[c[top--]];
+            c[++top] = i;
         }
-        for (register int i = 1; i <= n; ++i)
-            cmax(ans, x[i] * (r[i] - l[i] - 1));
+        top = 0;
+        for (register int i = n; i; --i) {
+            if (!b[i][j]) {
+                top = e[i] = 0;
+                continue;
+            }
+            e[i] = 1;
+            while (top && b[i][j] < b[c[top]][j])
+                e[i] += e[c[top--]];
+            c[++top] = i;
+            ans += d[i] * e[i] * b[i][j];
+        }
     }
     printf("%d\n", ans);
     return 0;
