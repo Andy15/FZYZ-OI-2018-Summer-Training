@@ -1,9 +1,9 @@
 - [ ] YZOJ 1969
 - [ ] YZOJ 2164
 - [ ] YZOJ 2263
-- [ ] YZOJ 1647/2211
+- [x] YZOJ 1647/2211
 - [ ] YZOJ 2257
-- [ ] YZOJ 2664
+- [x] YZOJ 2664
 - [ ] BZOJ 1067
 - [ ] BZOJ 3064
 - [ ] BZOJ 3226

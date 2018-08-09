@@ -1,5 +1,5 @@
 - [ ] YZOJ 1201
-- [ ] YZOJ 1967
+- [x] YZOJ 1967
 - [ ] BZOJ 1012
 - [ ] BZOJ 1798
 - [ ] BZOJ 4415

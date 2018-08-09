@@ -1,6 +1,6 @@
 - [x] YZOJ 1303
 - [x] YZOJ 1069
 - [ ] YZOJ 1137
-- [ ] YZOJ 1959
+- [x] YZOJ 1959
 - [ ] YZOJ 2281
-- [ ] YZOJ 2710
+- [x] YZOJ 2710
