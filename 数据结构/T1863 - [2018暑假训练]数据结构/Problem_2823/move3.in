@@ -1,0 +1,201 @@
+50 200
+find 0 34 37 181 7061
+find 1 12 33 64 8617
+find 2 0 32 151 8661
+find 3 0 46 74 3929
+find 4 38 34 18 4595
+find 5 33 41 70 388
+find 6 31 34 59 1165
+find 7 29 5 20 4551
+find 8 8 14 193 8766
+find 9 13 48 164 1824
+find 10 6 23 153 1626
+find 11 22 29 123 1558
+find 12 28 48 93 2618
+find 13 35 18 99 7529
+find 14 3 11 182 6777
+find 15 37 5 92 6716
+find 16 39 10 4 1021
+find 17 30 36 2 1777
+find 18 6 39 176 2170
+find 19 43 48 78 2099
+find 20 3 9 185 3940
+find 21 36 14 90 6489
+find 22 31 35 24 4387
+find 23 37 13 166 2746
+find 24 21 22 58 476
+find 25 0 22 165 7870
+find 26 36 35 117 3338
+move 47 30
+move 36 44
+move 39 22
+find 27 41 35 147 404
+change 0 1929
+find 28 3 37 96 1549
+change 12 8664
+find 29 29 32 162 172
+change 15 3711
+move 3 24
+find 30 39 6 41 5998
+move 13 17
+find 31 23 32 146 7079
+find 32 30 25 67 857
+change 8 3746
+find 33 16 11 7 6624
+move 19 6
+move 5 19
+find 34 19 6 163 966
+change 13 2405
+change 25 898
+find 35 24 4 31 5262
+move 11 38
+find 36 35 46 159 5063
+move 27 23
+move 30 8
+find 37 41 28 97 6929
+change 35 3173
+move 6 39
+move 43 11
+find 38 4 16 77 3010
+change 36 6694
+find 39 40 5 5 8279
+find 40 33 5 100 4717
+find 41 17 25 133 2928
+find 42 44 47 118 8671
+find 43 47 12 30 7765
+move 45 41
+move 40 35
+find 44 37 12 89 3884
+change 31 4789
+find 45 22 30 38 5114
+find 46 40 39 22 1547
+move 39 23
+find 47 21 2 35 2123
+find 48 2 11 110 3808
+find 49 30 14 179 3848
+change 28 3796
+change 0 455
+move 46 36
+find 50 8 39 195 6981
+move 45 6
+find 51 6 0 189 3282
+change 3 7220
+find 52 37 30 173 1436
+find 53 48 47 42 2617
+move 8 34
+find 54 2 23 183 2295
+move 19 13
+find 55 24 9 104 8869
+move 18 35
+move 4 23
+change 10 5617
+find 56 22 27 140 541
+move 29 13
+find 57 41 22 37 2418
+move 21 44
+move 10 45
+move 41 25
+move 2 39
+move 46 16
+move 19 28
+change 13 8885
+move 8 16
+find 58 21 2 79 6965
+find 59 14 3 108 5669
+find 60 25 35 15 1406
+find 61 43 3 44 1899
+find 62 10 34 48 7191
+find 63 40 47 102 6375
+find 64 22 18 130 8088
+move 32 27
+move 24 2
+move 36 21
+find 65 38 46 113 5925
+change 63 5284
+move 23 19
+move 32 14
+find 66 2 12 169 2697
+change 21 3409
+move 17 39
+move 38 27
+change 3 8371
+change 42 3081
+find 67 23 16 152 4871
+find 68 16 47 87 345
+move 35 19
+move 3 11
+find 69 45 22 76 4483
+find 70 23 48 17 5822
+change 66 8219
+find 71 2 22 49 4357
+find 72 14 6 200 5741
+change 58 2628
+find 73 34 9 125 3826
+change 72 1366
+change 60 2316
+move 48 21
+move 22 33
+find 74 40 22 141 8034
+move 43 10
+move 41 16
+find 75 23 42 55 5974
+find 76 15 0 142 7098
+change 51 4904
+move 33 26
+move 47 31
+move 19 33
+change 74 1095
+move 27 38
+find 77 28 18 9 8799
+find 78 40 9 62 821
+move 23 41
+change 27 5683
+change 47 5764
+find 79 42 21 192 8258
+move 10 45
+change 77 4541
+find 80 39 21 88 9398
+move 33 44
+find 81 42 15 105 8695
+move 44 39
+change 29 5868
+move 15 0
+move 35 33
+move 45 27
+find 82 7 30 155 8639
+move 24 6
+change 73 5013
+find 83 40 49 91 2028
+move 49 39
+find 84 6 39 73 8802
+move 9 2
+change 43 9369
+find 85 19 32 16 9458
+find 86 33 29 194 4295
+find 87 5 33 186 607
+move 40 6
+change 51 9009
+find 88 20 38 12 9108
+find 89 1 42 112 2022
+move 15 6
+change 61 3336
+find 90 26 4 168 5189
+find 91 1 33 160 9997
+find 92 12 4 25 5489
+find 93 19 35 172 6219
+change 67 4820
+move 0 11
+move 23 38
+move 36 47
+move 2 11
+move 37 25
+move 39 8
+find 94 39 22 45 8145
+move 29 2
+find 95 34 31 10 1974
+find 96 29 19 85 1051
+change 73 8908
+move 26 22
+change 34 8629
+change 39 6595
+find 97 23 14 66 7281
