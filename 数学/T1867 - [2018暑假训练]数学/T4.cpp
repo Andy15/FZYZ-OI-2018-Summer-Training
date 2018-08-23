@@ -43,9 +43,9 @@ int xpow(register int x, register int y) {
 
 int main() {
     com[1] = 1;
-    for (register int i = 2; i <= 10000000; ++i) {
+    for (register int i = 2; i <= 10000; ++i) {
         !com[i] && (p[++p_cnt] = i);
-        for (register int j = 1; j <= p_cnt && i * p[j] <= 10000000; ++j) {
+        for (register int j = 1; j <= p_cnt && i * p[j] <= 10000; ++j) {
             com[i * p[j]] = 1;
             if (!(i % p[j]))
                 break;
@@ -60,6 +60,10 @@ int main() {
         }
         register int ans = 1;
         for (register int pos = 1, *prime = p + 1, cnt = 0; n != 1; ++pos, ++prime, cnt = 0) {
+            if (*prime * *prime > n) {
+                ans *= n - 2;
+                break;
+            }
             while (!(n % *prime)) {
                 ++cnt;
                 n /= *prime;
@@ -67,10 +71,6 @@ int main() {
             if (!cnt)
                 continue;
             ans *= xpow(*prime, cnt - 1) * (*prime - 2);
-            if (!com[n]) {
-                ans *= n - 2;
-                break;
-            }
         }
         print(ans); *O++ = '\n';
     }
