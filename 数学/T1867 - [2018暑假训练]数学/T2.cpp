@@ -16,9 +16,10 @@ long long phi(register long long o) {
 
 long long xmul(register long long a, register long long b, register long long modulo) {
     register long long res = 0;
-    for (register int i = 62; ~i; --i) {
-        res = (res << 1) % modulo;
-        b & (1LL << i) && (res = (res + a) % modulo);
+    while (b) {
+        b & 1 && (res = (res + a) % modulo);
+        a = (a << 1) % modulo;
+        b >>= 1;
     }
     return res;
 }
