@@ -23,7 +23,8 @@ namespace MirAc1e {
         //register char ch; // Unsigned
     	//while (ch = getc(), ch < '0' || ch > '9'); // Unsigned
         //o = ch - '0'; // Unsigned
-    	//while (ch = getc(), ch >= '0' && ch <= '9') o = o * 10 + ch - '0';
+    	//while (ch = getc(), ch >= '0' && ch <= '9')
+        //    o = o * 10 + ch - '0';
     	//!f && (o = -o); // Signed
     }
 
